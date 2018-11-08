@@ -3,9 +3,8 @@ let router = express.Router();
 let result = require('../lib/result');
 let db = require('../lib/db');
 
-/* GET articles listing. */
 router.get('', function (req, res) {
-    db.find(req.query).then(function (data) {
+    db.findMp(req.query).then(function (data) {
         res.send(result.success(data));
     });
 });
