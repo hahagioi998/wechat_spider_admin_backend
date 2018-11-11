@@ -9,4 +9,10 @@ router.get('', function (req, res) {
     });
 });
 
+router.get('/counts', function (req, res) {
+    db.getMpCounts(req.query).then(function (data) {
+        res.send(result.success(data));
+    });
+});
+
 module.exports = router;
