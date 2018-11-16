@@ -28,7 +28,7 @@ app.use(function (req, res, next) {
         'Access-Control-Allow-Credentials': true,
         'Access-Control-Allow-Headers': 'content-type,X-Token',
         'Access-Control-Max-Age': '2592000',
-        'Access-Control-Allow-Origin': 'http://localhost:9528'
+        'Access-Control-Allow-Origin': '*'
     })
     next();
 })
